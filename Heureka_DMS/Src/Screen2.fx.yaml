@@ -881,9 +881,7 @@ Screen2 As screen:
 
     Button2 As button:
         OnSelect: |-
-            =false
-            
-            //komentář
+            =UpdateContext({varTest: true});
         Text: ="Button"
         X: =124
         Y: =644
