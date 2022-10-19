@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "710bdc4f-920c-4c7e-9696-64f42732a42a",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "DMS_SystemAction_35_CanvasApp",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]
