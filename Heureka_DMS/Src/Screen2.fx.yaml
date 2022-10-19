@@ -947,3 +947,15 @@ Screen2 As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
+    Button2 As button:
+        Text: ="Button"
+        X: =124
+        Y: =644
+        ZIndex: =2
+
+    Label4 As label:
+        Text: ="Text"
+        X: =412
+        Y: =644
+        ZIndex: =3
+
