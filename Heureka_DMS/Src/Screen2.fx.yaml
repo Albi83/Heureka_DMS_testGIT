@@ -879,3 +879,15 @@ Screen2 As screen:
             Y: =0
             ZIndex: =62
 
+    Button2 As button:
+        Text: ="Button"
+        X: =124
+        Y: =644
+        ZIndex: =2
+
+    Label4 As label:
+        Text: ="Text"
+        X: =412
+        Y: =644
+        ZIndex: =3
+
