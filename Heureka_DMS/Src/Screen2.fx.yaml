@@ -880,6 +880,10 @@ Screen2 As screen:
             ZIndex: =62
 
     Button2 As button:
+        OnSelect: |-
+            =false
+            
+            //komentář
         Text: ="Button"
         X: =124
         Y: =644
