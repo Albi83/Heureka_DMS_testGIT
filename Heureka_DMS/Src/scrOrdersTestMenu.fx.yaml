@@ -1,0 +1,317 @@
+scrOrdersTestMenu As screen:
+
+    patternButton_1 As button:
+        BorderColor: =patternColor3.DisabledFill
+        BorderThickness: =0.5
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =patternColor4.Fill
+        FocusedBorderThickness: =0.5
+        Height: =155
+        HoverBorderColor: =patternColor4.Fill
+        HoverColor: =
+        HoverFill: =
+        OnSelect: |-
+            =Set(OrderSHPItemID,Blank());
+            Set(customFormMode,FormMode.New);
+            Set(DebugMode,true);
+            Navigate(scrOrders)
+        PressedBorderColor: =patternColor4.Fill
+        PressedColor: =
+        PressedFill: =ColorFade(patternColor3.Fill, 90%)
+        Text: ="Nová objednávka"
+        X: =870
+        Y: =97
+        ZIndex: =1
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderThickness: =1
+        Height: =627
+        Items: =DMSOrder
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Width: =710
+        X: =42
+        Y: =112
+        ZIndex: =2
+
+        Image1 As image:
+            Height: =128
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Order Number'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image1.Width - 104
+            X: =Image1.X + Image1.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =Title1.Y + Title1.Height + 4
+            ZIndex: =3
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Set(OrderSHPItemID,ThisItem.ID);
+                Set(customFormMode,FormMode.Edit);
+                Set(DebugMode,true);
+                Navigate(scrOrders)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator2 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    bgSetLangStatic_1 As rectangle:
+        DisabledFill: =bgSetLangStatic_1.Fill
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =bgSetLangStatic_1.BorderColor
+        Height: =32
+        HoverFill: =bgSetLangStatic_1.Fill
+        PressedFill: =bgSetLangStatic_1.Fill
+        Width: =180
+        X: =1144
+        Y: =44
+        ZIndex: =3
+
+    lblSetLangStatic_1 As label:
+        FocusedBorderColor: =lblSetLangStatic_1.BorderColor
+        Font: =Font.'Segoe UI'
+        Height: =32
+        HoverBorderColor: =lblSetLangStatic_1.BorderColor
+        HoverColor: =lblSetLangStatic_1.Color
+        HoverFill: =lblSetLangStatic_1.Fill
+        OnSelect: =Set(LangMenu,!LangMenu)
+        PressedBorderColor: =lblSetLangStatic_1.BorderColor
+        PressedColor: =lblSetLangStatic_1.Color
+        PressedFill: =lblSetLangStatic_1.Fill
+        Text: =LookUp(StringsOrder,AppKey="language" & Upper(SelectedLanguage),String)
+        X: =1179
+        Y: =44
+        ZIndex: =4
+
+    btnLangColExp_1 As icon.ChevronDown:
+        Color: =RGBA(128, 128, 128, 1)
+        DisabledFill: =btnLangColExp_1.Fill
+        FocusedBorderColor: =btnLangColExp_1.BorderColor
+        Height: =20
+        HoverBorderColor: =ColorFade(btnLangColExp_1.BorderColor, 20%)
+        HoverColor: =ColorFade(btnLangColExp_1.Color, 20%)
+        HoverFill: =btnLangColExp_1.Fill
+        Icon: =If(LangMenu,Icon.ChevronUp,Icon.ChevronDown)
+        OnSelect: =Set(LangMenu,!LangMenu)
+        PressedBorderColor: =ColorFade(btnLangColExp_1.BorderColor, -20%)
+        PressedColor: =ColorFade(btnLangColExp_1.Color, -20%)
+        PressedFill: =btnLangColExp_1.Fill
+        Width: =20
+        X: =1150
+        Y: =50
+        ZIndex: =5
+
+    btnLangSetEN_1 As button:
+        BorderColor: =
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(210, 230, 251, 1)
+        FocusedBorderColor: =btnLangSetEN_1.BorderColor
+        FocusedBorderThickness: =0
+        Font: =
+        FontWeight: =FontWeight.Normal
+        Height: =bgSetLangStatic_1.Height
+        HoverBorderColor: =ColorFade(btnLangSetEN_1.BorderColor, 20%)
+        HoverFill: =
+        OnSelect: =Set(SelectedLanguage,"en");Set(LangMenu,false);Set(UserSettings,false)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =btnLangSetEN_1.Fill
+        PressedColor: =btnLangSetEN_1.Fill
+        PressedFill: =
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: =LookUp(StringsOrder,AppKey="languageEN" && Language=SelectedLanguage,String)
+        Visible: =LangMenu
+        Width: =bgSetLangStatic_1.Width-30
+        X: =1144
+        Y: =81
+        ZIndex: =6
+
+    btnLangSetCZ_1 As button:
+        BorderColor: =
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(210, 230, 251, 1)
+        FocusedBorderColor: =btnLangSetCZ_1.BorderColor
+        FocusedBorderThickness: =0
+        FontWeight: =FontWeight.Normal
+        Height: =bgSetLangStatic_1.Height
+        HoverBorderColor: =ColorFade(btnLangSetCZ_1.BorderColor, 20%)
+        HoverFill: =
+        OnSelect: =Set(SelectedLanguage,"cs");Set(LangMenu,false);Set(UserSettings,false)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =btnLangSetCZ_1.Fill
+        PressedColor: =btnLangSetCZ_1.Fill
+        PressedFill: =
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: =LookUp(StringsOrder,AppKey="languageCS" && Language=SelectedLanguage,String)
+        Visible: =LangMenu
+        Width: =bgSetLangStatic_1.Width-30
+        X: =1144
+        Y: =119
+        ZIndex: =7
+
+    btnLangSetHU_1 As button:
+        BorderColor: =
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(210, 230, 251, 1)
+        FocusedBorderColor: =btnLangSetHU_1.BorderColor
+        FocusedBorderThickness: =0
+        FontWeight: =FontWeight.Normal
+        Height: =bgSetLangStatic_1.Height
+        HoverBorderColor: =ColorFade(btnLangSetHU_1.BorderColor, 20%)
+        HoverFill: =
+        OnSelect: =Set(SelectedLanguage,"hu");Set(LangMenu,false);Set(UserSettings,false)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =btnLangSetHU_1.Fill
+        PressedColor: =btnLangSetHU_1.Fill
+        PressedFill: =
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: =LookUp(StringsOrder,AppKey="languageHU" && Language=SelectedLanguage,String)
+        Visible: =LangMenu
+        Width: =bgSetLangStatic_1.Width-30
+        X: =1144
+        Y: =159
+        ZIndex: =8
+
+    btnLangSetHR_1 As button:
+        BorderColor: =
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(210, 230, 251, 1)
+        FocusedBorderColor: =btnLangSetHR_1.BorderColor
+        FocusedBorderThickness: =0
+        FontWeight: =FontWeight.Normal
+        Height: =bgSetLangStatic_1.Height
+        HoverBorderColor: =ColorFade(btnLangSetHR_1.BorderColor, 20%)
+        HoverFill: =
+        OnSelect: =Set(SelectedLanguage,"hr");Set(LangMenu,false);Set(UserSettings,false)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =btnLangSetHR_1.Fill
+        PressedColor: =btnLangSetHR_1.Fill
+        PressedFill: =
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: =LookUp(StringsOrder,AppKey="languageHR" && Language=SelectedLanguage,String)
+        Visible: =LangMenu
+        Width: =bgSetLangStatic_1.Width-30
+        X: =1144
+        Y: =198
+        ZIndex: =9
+
+    btnLangSetSL_1 As button:
+        BorderColor: =
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(210, 230, 251, 1)
+        FocusedBorderColor: =btnLangSetSL_1.BorderColor
+        FocusedBorderThickness: =0
+        FontWeight: =FontWeight.Normal
+        Height: =bgSetLangStatic_1.Height
+        HoverBorderColor: =ColorFade(btnLangSetSL_1.BorderColor, 20%)
+        HoverFill: =
+        OnSelect: =Set(SelectedLanguage,"sl");Set(LangMenu,false);Set(UserSettings,false)
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        PressedBorderColor: =btnLangSetSL_1.Fill
+        PressedColor: =btnLangSetSL_1.Fill
+        PressedFill: =
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: =LookUp(StringsOrder,AppKey="languageSL" && Language=SelectedLanguage,String)
+        Visible: =LangMenu
+        Width: =bgSetLangStatic_1.Width-30
+        X: =1144
+        Y: =238
+        ZIndex: =10
+
+    Button1 As button:
+        OnSelect: =//DMS_WriteLog.Run(Now(),1,666,"Popis události",User().Email,132456)
+        Text: |-
+            ="WriteLog
+            "
+        X: =884
+        Y: =406
+        ZIndex: =11
+

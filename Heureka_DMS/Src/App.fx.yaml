@@ -1,0 +1,128 @@
+App As appinfo:
+    BackEnabled: =false
+    ConfirmExitMessage: =//"Unsaved changes will be lost."
+    OnStart: |-
+        =Set(appVersion,"1.5.9");
+        //Set(CurrentLegalEntity,"HEG");
+        Set(CurrentLegalEntity,LookUp(DMSLegalEntity,'Legal Entity Default').'Legal Entity Code');
+        Set(DebugMode,false);
+        Set(dbgWindow, false);
+        
+        Set(AdminMode,false);
+        //If(tglAdminMode && User().Email = txtAdminEmail.Text,Set(AdminMode,true),Set(AdminMode,false));
+        
+        If(IsBlank(SelectedLanguage),
+           If(
+                Left(Language(),2) = "en" ||
+                Left(Language(),2) = "cs" ||
+                Left(Language(),2) = "hu" ||
+                Left(Language(),2) = "hr" ||
+                Left(Language(),2) = "sl",
+                Set(SelectedLanguage,Left(Language(),2)),
+                Set(SelectedLanguage,"en")
+           )
+        );
+        
+        //napevno cestina - smazat po testu
+        Set(SelectedLanguage,"en");
+        //napevno cestina - smazat po testu
+        
+        Set(
+            BlankPeople,
+            Table(
+                {
+                    Claims: Blank(),
+                    DisplayName: Blank(),
+                    Email: Blank(),
+                    Department: Blank(),
+                    Picture: Blank(),
+                    JobTitle: Blank()
+                }
+            )
+        );
+        
+        Set(
+            BlankPerson,
+                {
+                    Claims: Blank(),
+                    DisplayName: Blank(),
+                    Email: Blank(),
+                    Department: Blank(),
+                    Picture: Blank(),
+                    JobTitle: Blank()
+                }
+        );
+        Set(
+            BlankChoice,
+                {
+                    Id: -1,
+                    Value: Blank()
+                }
+        );
+        Set(
+            BlankLookup,
+                {
+                    Id: -1,
+                    Value: Blank()
+                }
+        );
+        
+        
+        Set(SHPMeClaim,
+            {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+            Claims:"i:0#.f|membership|" & Lower(User().Email),
+            Department:"",
+            DisplayName:User().FullName,
+            Email:User().Email,
+            JobTitle:".",
+            Picture:"."}
+        );
+        
+        Set(ParamScreen,Value(Param("screen")));
+        Set(ParamFormMode,Value(Param("formmode")));
+        Set(ParamItemID,Value(Param("itemid")));
+        
+        If(!IsBlank(ParamItemID),
+            Set(OrderSHPItemID,ParamItemID),
+            Set(OrderSHPItemID,Blank())
+        );
+        
+        Switch(
+            ParamFormMode,
+        
+            0,
+            Set(customFormMode,FormMode.Edit),
+        
+            1,
+            Set(customFormMode,FormMode.New),
+        
+            2,
+            Set(customFormMode,FormMode.View),
+        
+            Set(customFormMode,FormMode.View)
+        );
+        
+        Switch(
+            ParamScreen, 
+            
+            1,
+            Set(OrderSHPItemID,ParamItemID);
+            Navigate(scrOrders),
+        
+            2,
+            Set(InvoiceSHPItemID,ParamItemID);
+            Navigate(scrInvoices),
+        
+            3,
+            Set(ContractSHPItemID,ParamItemID);
+            Navigate(scrContracts),
+            
+            99,
+            //Set(ContractSHPItemID,ParamItemID);
+            Navigate(scrBudgetOverview),
+        
+            Navigate(scrError)
+        );
+        Set(generateOrderFromContract,false);
+        Set(generateInvoiceFromOrder,false);
+

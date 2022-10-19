@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "6dfb302a-01ca-4d3e-998b-3aa4f968459f",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "DMS_ContractsCreateAttachmentFolder_CanvasApp",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]
