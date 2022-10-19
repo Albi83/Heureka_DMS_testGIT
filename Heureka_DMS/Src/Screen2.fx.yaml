@@ -25,20 +25,6 @@ Screen2 As screen:
             Y: =0
             ZIndex: =1
 
-        "'Budget Owner_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Budget Owner"
-            FieldName: ="DMSOrdBudgetOwner"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =ThisItem.'Budget Owner'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =2
-
         "'Budget Owner E-mail_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Budget Owner E-mail"
@@ -47,7 +33,7 @@ Screen2 As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =3
-            Text: =ThisItem.'Budget Owner E-mail'.
+            Text: =ThisItem.'Budget Owner E-mail'
             Width: =100
             X: =0
             Y: =0
@@ -207,20 +193,6 @@ Screen2 As screen:
             Y: =0
             ZIndex: =14
 
-        Orderer_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Orderer"
-            FieldName: ="DMSOrderOrderer"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =15
-            Text: =ThisItem.Orderer
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =15
-
         DMSOrderOrdererEMail_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="DMSOrderOrdererEMail"
@@ -263,20 +235,6 @@ Screen2 As screen:
             Y: =0
             ZIndex: =18
 
-        Requestor_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Requestor"
-            FieldName: ="DMSOrderRequestor"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =19
-            Text: =ThisItem.Requestor
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =19
-
         "'Requestor E-mail_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Requestor E-mail"
@@ -318,20 +276,6 @@ Screen2 As screen:
             X: =0
             Y: =0
             ZIndex: =22
-
-        Watchers_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Watchers"
-            FieldName: ="DMSOrderWatchers"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =23
-            Text: =ThisItem.Watchers
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =23
 
         "'Invoices Amount - Approved_Column1' As dataTableColumn.numberColumn":
             DisplayMode: =DisplayMode.Edit
@@ -417,20 +361,6 @@ Screen2 As screen:
             Y: =0
             ZIndex: =29
 
-        "'Actual Owner_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Actual Owner"
-            FieldName: ="DMSOrdProcessActualOwner"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =30
-            Text: =ThisItem.'Actual Owner'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =30
-
         "'Actual Owner E-mail_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Actual Owner E-mail"
@@ -500,20 +430,6 @@ Screen2 As screen:
             X: =0
             Y: =0
             ZIndex: =35
-
-        "'Previous Owner_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Previous Owner"
-            FieldName: ="DMSOrdProcessPreviousOwner"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =36
-            Text: =ThisItem.'Previous Owner'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =36
 
         "'Previous Owner E-mail_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
@@ -627,20 +543,6 @@ Screen2 As screen:
             Y: =0
             ZIndex: =44
 
-        "'Order Action Delegate to_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Order Action Delegate to"
-            FieldName: ="DMSOrderActionDelegateTo"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =45
-            Text: =ThisItem.'Order Action Delegate to'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =45
-
         "'Order Action Delegate to E-mail_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Order Action Delegate to E-mail"
@@ -668,20 +570,6 @@ Screen2 As screen:
             X: =0
             Y: =0
             ZIndex: =47
-
-        "'Order Action Required by_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Order Action Required by"
-            FieldName: ="DMSOrderActionRequiredBy"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =48
-            Text: =ThisItem.'Order Action Required by'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =48
 
         "'Order Action Required by E-mail_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
@@ -738,20 +626,6 @@ Screen2 As screen:
             X: =0
             Y: =0
             ZIndex: =52
-
-        "'Approved By_Column1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Approved By"
-            FieldName: ="DMSApprovedBy"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =53
-            Text: =ThisItem.'Approved By'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =53
 
         "'Order Amount Remaining_Column1' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
@@ -864,88 +738,6 @@ Screen2 As screen:
             X: =0
             Y: =0
             ZIndex: =61
-
-        Attachments_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Attachments"
-            FieldName: ="{Attachments}"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =62
-            Text: =ThisItem.Attachments
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =62
-
-    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =400
-        Items: =Sort(DMSOrder
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =Min(160, Self.Height - 60)
-        Y: =368
-        ZIndex: =2
-
-        Image4 As image:
-            Height: =128
-            OnSelect: =Select(Parent)
-            Width: =128
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =1
-
-        Title3 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Title
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image4.Width - 104
-            X: =Image4.X + Image4.Width + 24
-            Y: =44
-            ZIndex: =2
-
-        Subtitle3 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Order Link'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =Title3.X
-            Y: =Title3.Y + Title3.Height + 4
-            ZIndex: =3
-
-        NextArrow3 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Height: =60
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="View item details"
-            Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
-
-        Separator4 As rectangle:
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - 1
-            ZIndex: =5
 
     Button2 As button:
         OnSelect: |-
