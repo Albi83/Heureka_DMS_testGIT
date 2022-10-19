@@ -1,9 +1,0 @@
-[
-  {
-    "AddinConnectorId": "a0b242cc-86a6-4ff7-ae73-5d1301415b8a",
-    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
-    "Name": "DMS_ContractsCreateAttachmentFile",
-    "ServiceKind": "AddinWadl",
-    "Type": "ServiceInfo"
-  }
-]

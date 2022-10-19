@@ -1,14 +1,18 @@
 {
   "ComponentIndexes": {},
   "ControlUniqueGuids": {},
-  "ControlUniqueIds": {},
+  "ControlUniqueIds": {
+    "App": 1
+  },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "10/19/2022 11:09:48",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
+  "OldLogoFileName": "logo.jpg",
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {},
@@ -16,8 +20,44 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {},
-  "PublishOrderIndices": {},
+  "PublishOrderIndices": {
+    "App": 0
+  },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
-  "TemplateVersions": {}
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 10.2001171,
+    "ControlCount": {
+      "arrow": 4,
+      "attachments": 3,
+      "button": 106,
+      "checkbox": 9,
+      "circle": 1,
+      "combobox": 50,
+      "dataCard": 4,
+      "dataTable": 1,
+      "dataTableColumn": 62,
+      "datepicker": 17,
+      "dropdown": 1,
+      "fluidGrid": 4,
+      "form": 3,
+      "gallery": 18,
+      "galleryTemplate": 18,
+      "groupContainer": 89,
+      "icon": 50,
+      "image": 13,
+      "label": 469,
+      "Microsoft_CoreControls_DatePicker": 13,
+      "rectangle": 75,
+      "screen": 12,
+      "text": 97,
+      "timer": 4,
+      "toggleSwitch": 3,
+      "typedDataCard": 3
+    },
+    "DeserializationLoadTime": 9.6162429,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": true
 }

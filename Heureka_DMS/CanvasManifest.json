@@ -108,18 +108,5 @@
     "PublishTarget": "player",
     "UserLocale": "en-US"
   },
-  "ScreenOrder": [
-    "Settings",
-    "scrConfigs",
-    "scrOrders",
-    "scrInvoices",
-    "scrContracts",
-    "scrBudgetOverview",
-    "scrOrdersTestMenu",
-    "scrInvoicesTestMenu",
-    "scrContractsTestMenu",
-    "Screen1",
-    "scrError",
-    "Screen2"
-  ]
+  "ScreenOrder": []
 }
