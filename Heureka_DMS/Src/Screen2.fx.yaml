@@ -948,6 +948,8 @@ Screen2 As screen:
             ZIndex: =5
 
     Button2 As button:
+        OnSelect: |-
+            =UpdateContext({varTest: true});
         Text: ="Button"
         X: =124
         Y: =644
