@@ -87731,6 +87731,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Screen2.varTest"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen2.varTest",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varTest",
+                "module": "Screen2",
+                "type": "Screen2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrError.iconCircle1.Fill"
                 }
               ],

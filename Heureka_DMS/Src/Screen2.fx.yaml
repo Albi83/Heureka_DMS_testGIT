@@ -879,14 +879,6 @@ Screen2 As screen:
             Y: =0
             ZIndex: =62
 
-    Button2 As button:
-        OnSelect: |-
-            =UpdateContext({varTest: true});
-        Text: ="Button"
-        X: =124
-        Y: =644
-        ZIndex: =2
-
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =400
         Items: =Sort(DMSOrder
@@ -954,6 +946,14 @@ Screen2 As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+    Button2 As button:
+        OnSelect: |-
+            =UpdateContext({varTest: true});
+        Text: ="Button"
+        X: =124
+        Y: =644
+        ZIndex: =2
 
     Label4 As label:
         Text: ="Text"
